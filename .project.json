@@ -101,6 +101,9 @@
         },
         {
             "name": "HotelCondition.png"
+        },
+        {
+            "name": "CustomerService.png"
         }
     ],
     "edges": [
