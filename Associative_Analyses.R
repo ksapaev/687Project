@@ -13,13 +13,14 @@ newdf <- read.csv('rules_data.csv')
 library(ggplot2)
 library(arules)
 library(arulesViz)
-library(kernlab)
+
 
 ##RIGHT HAND SIDE as NPS types (Detractor, Passive, or Promoter)
 
-#Creating a transaction from the dataset
+#Converting first column as factor
 newdf$LengthOfStay <- factor(newdf[ ,1])
 
+#Creating a transaction from the dataset
 trans <- as(newdf, "transactions")
 summary(trans)
 itemLabels(trans)
