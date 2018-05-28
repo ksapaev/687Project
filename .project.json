@@ -59,6 +59,9 @@
         },
         {
             "name": "LTR_RoomSatisfied.png"
+        },
+        {
+            "name": "LTR_CustomerService.png"
         }
     ],
     "edges": [
