@@ -13,6 +13,7 @@ NewDF <- read.csv('rules_data.csv')
 library(ggplot2)
 library(arules)
 library(arulesViz)
+library(kernlab)
 
 ##RIGHT HAND SIDE as NPS types (Detractor, Passive, or Promoter)
 
