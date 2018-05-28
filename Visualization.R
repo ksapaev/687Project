@@ -117,10 +117,10 @@ USmapDet <- USmapDet + fifty_states_inset_boxes()
 USmapDet <- USmapDet + scale_fill_gradient(low = "lightblue",high = "darkblue")
 
 #Adding a layer with points
-USmapDet <- USmapDet + geom_point(data=Detractors, aes(x=lon, y=lat, color=Detractor)) + scale_colour_gradient(low = 'yellow', high='red')
+USmapDet <- USmapDet + geom_point(data=Detractors, aes(x=lon, y=lat, color=Detractor, size=Detractor)) + scale_colour_gradient(low = 'yellow', high='red')
 
 #Scaling points by radius
-USmapDet <- USmapDet + scale_radius(aes(size=Detractors$Detractor))
+#USmapDet <- USmapDet + scale_radius(aes(size=Detractors$Detractor))
 
 # Creating png for the map.
 png(filename="map_usa_Detractor.png", width=800, height=600)
