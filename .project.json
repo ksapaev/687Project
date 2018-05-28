@@ -104,6 +104,9 @@
         },
         {
             "name": "CustomerService.png"
+        },
+        {
+            "name": "StaffCared.png"
         }
     ],
     "edges": [
