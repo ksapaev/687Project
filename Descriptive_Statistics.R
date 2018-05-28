@@ -106,10 +106,12 @@ HistogramLTR <- hist(df$LTR, main="Histogram for Likelihood to recommend", xlab=
                      xlim=c(0,10), las=1, breaks=15)
 dev.off()
 
+
 png(filename="RoomSatisfaction.png", width=800, height=600)
 HistogramRoomSat <- hist(data$Room_Satisfy, main="Histogram for Room Satisfaction", xlab= "Room Satisfaction", border="blue", col="green",
                          xlim=c(0,10), las=1, breaks=15)
 dev.off()
+
 
 png(filename="CheckIn.png", width=800, height=600)
 HistogramCheckIn <- hist(data$CheckIn, main="Histogram for Check in", xlab= "Check In", border="blue", col="yellow",
@@ -117,62 +119,30 @@ HistogramCheckIn <- hist(data$CheckIn, main="Histogram for Check in", xlab= "Che
 dev.off()
 
 
-HistogramHotelC <- hist(data$Hotel_Condition, 
-                        main="Histogram for Hotel Condition", 
-                        xlab= "Hotel Condition", 
-                        border="blue", 
-                        col="purple",
-                        xlim=c(0,10),
-                        las=1, 
-                        breaks=15)
-
-HistogramCustServ <- hist(data$Customer_Service, 
-                          main="Histogram for Customer Service", 
-                          xlab= "Customer Service", 
-                          border="blue", 
-                          col="red",
-                          xlim=c(0,10),
-                          las=1, 
-                          breaks=15)
-
-HistogramStaffCared <- hist(data$Staff_Cared, 
-                            main="Histogram for Staff Cared", 
-                            xlab= "Staff Care", 
-                            border="blue", 
-                            col="grey",
-                            xlim=c(0,10),
-                            las=1, 
-                            breaks=15)
-#Create PNG file
-
-
-
-
-
-
-
-png(filename="HistogramHotelC.png", width=800, height=600)
-plot(HistogramHotelC)
+png(filename="HotelCondition.png", width=800, height=600)
+HistogramHotelC <- hist(data$Hotel_Condition, main="Histogram for Hotel Condition", xlab= "Hotel Condition", border="blue", col="purple",
+                        xlim=c(0,10), las=1, breaks=15)
 dev.off()
 
-png(filename="HistogramCustServ.png", width=800, height=600)
-plot(HistogramCustServ)
+
+png(filename="CustomerService.png", width=800, height=600)
+HistogramCustServ <- hist(data$Customer_Service, main="Histogram for Customer Service", xlab= "Customer Service", border="blue", col="red",
+                          xlim=c(0,10), las=1, breaks=15)
 dev.off()
 
-png(filename="HistogramStaffCared.png", width=800, height=600)
-plot(HistogramStaffCared)
+
+png(filename="StaffCared.png", width=800, height=600)
+HistogramStaffCared <- hist(data$Staff_Cared, main="Histogram for Staff Cared", xlab= "Staff Care", border="blue", col="grey",
+                            xlim=c(0,10), las=1, breaks=15)
 dev.off()
+
 
 
 ## end your R code and logic 
 
 ####################################
 ##### write output file ############
-# add your R code to write CustomerService.png
+# add your R code to write output file
 ####################################
-
-
-
-
 
 
