@@ -35,6 +35,10 @@
         {
             "source": "Associative_Rules.R",
             "target": "rules_data.csv"
+        },
+        {
+            "source": "rules_data.csv",
+            "target": "Associative_Analyses.R"
         }
     ]
 }
