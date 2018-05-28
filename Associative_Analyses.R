@@ -5,7 +5,7 @@ setwd(Sys.getenv('PROJECT_HOME'))
 
 ####################################
 ## write code to read input csv into data frame
-df <- read.csv('rules_data.csv')
+newdf <- read.csv('rules_data.csv')
 ####################################
 
 ## start writing your R code from here
@@ -13,12 +13,15 @@ df <- read.csv('rules_data.csv')
 library(ggplot2)
 library(arules)
 library(arulesViz)
-library(kernlab)
+
 
 ##RIGHT HAND SIDE as NPS types (Detractor, Passive, or Promoter)
 
+#Converting first column as factor
+newdf$LengthOfStay <- factor(newdf[ ,1])
+
 #Creating a transaction from the dataset
-trans <- as(df, "transactions")
+trans <- as(newdf, "transactions")
 summary(trans)
 itemLabels(trans)
 
