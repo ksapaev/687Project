@@ -15,8 +15,6 @@ NewDF <- data.frame(LengthOfStay=df$LengthStay, Gender=df$Gender, AgeRange=df$Ag
                     State = df$StateAbb, Location = df$Location, Country = df$Country, NPS = df$NPS)
 
 
-#Convert column 'Length of stay' into a factor
-NewDF$LengthOfStay <- factor(NewDF[ ,1])
 
 ## end your R code and logic 
 
