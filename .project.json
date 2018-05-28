@@ -49,6 +49,10 @@
         {
             "source": "Associative_Analyses.R",
             "target": "DetSupport.png"
+        },
+        {
+            "source": "Associative_Analyses.R",
+            "target": "DetConfidence.png"
         }
     ]
 }
