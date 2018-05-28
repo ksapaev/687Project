@@ -133,6 +133,10 @@
         {
             "source": "LM_CheckOut.R",
             "target": "LTR_StaffCared.png"
+        },
+        {
+            "source": "LM_CheckOut.R",
+            "target": "LTR_RoomSatisfied.png"
         }
     ]
 }
