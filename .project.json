@@ -63,6 +63,10 @@
         {
             "source": "Associative_Analyses.R",
             "target": "ProSupport.png"
+        },
+        {
+            "source": "Associative_Analyses.R",
+            "target": "ProConfidence.png"
         }
     ]
 }
