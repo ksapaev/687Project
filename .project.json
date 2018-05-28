@@ -112,6 +112,10 @@
         {
             "source": "LM_CheckIn.R",
             "target": "LTR_CheckIn_HC.png"
+        },
+        {
+            "source": "Associative_Analyses.R",
+            "target": "Frequency.png"
         }
     ]
 }
