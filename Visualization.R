@@ -37,16 +37,17 @@ dev.off()
 
 
 
-#Calculating mean LTR for each state
+#Calculating mean LTR/Number of Detractors for each state
 LTRmean <- tapply(df$LTR, df$StateAbb, mean)
+Detractor <- tapply(df$NPS, df$StateAbb, length)
 
-
-#Creating a dataframe of 50 states and mean NPS
+#Creating a dataframe of 50 states and mean NPS/Number of Detractors
 LTRmeans <- data.frame(abb=(names(LTRmean)), LTR=LTRmean)
+Detractors <- data.frame(abb=(names(Detractor)), Detractor=Detractor)
 
-#Adding 'state name' in lowercase format to the dataframe
+#Adding 'state name' in lowercase format to the dataframes LTR/Detractors
 LTRmeans <- LTRmeans %>% mutate(state=tolower(state.name[match(LTRmeans$abb,state.abb)]))
-
+Detractors <- Detractors %>% mutate(state=tolower(state.name[match(Detractors$abb,state.abb)]))
 
 #Getting the US map
 data("fifty_states")
@@ -72,7 +73,7 @@ point.lon <- c(-86.791130, -152.404419, -111.431221, -92.373123, -119.681564, -1
 point <- data.frame(state=point.state, lon=point.lon, lat=point.lat)
 
 
-#Adding geopoints to the dataframe
+#Adding geopoints to the dataframes LTR/Detractors
 LTRmeans <- LTRmeans %>% mutate(lat=point$lat[match(tolower(point$state),state)], lon=point$lon[match(tolower(point$state),state)])
 
 
