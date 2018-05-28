@@ -19,7 +19,7 @@ myboxPlot <- ggplot(df, aes(x=Overall_Satisfaction, y=LTR)) + geom_boxplot(fill=
 myboxPlot <- myboxPlot + scale_x_continuous( breaks = 1:10)+ scale_y_continuous( breaks = 1:10)
 
 #Creating the png file of the boxplot.
-png(filename="boxplot_LTR_Satisfaction.png")
+png(filename="boxplot_LTR_Satisfaction.png", width=600, height=600)
 myboxPlot
 dev.off()
 
@@ -78,7 +78,7 @@ USmap <- USmap + geom_point(data=LTRmeans, aes(x=lon, y=lat, color=LTR)) + scale
 USmap <- USmap + scale_radius(aes(size=LTRmeans$LTR))
 
 # Creating png for the map.
-png(filename="map_usa_LTR.png")
+png(filename="map_usa_LTR.png", width=800, height=600)
 USmap
 dev.off()
 
