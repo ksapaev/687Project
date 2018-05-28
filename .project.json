@@ -234,6 +234,10 @@
         {
             "source": "Descriptive_Statistics.R",
             "target": "CheckIn.png"
+        },
+        {
+            "source": "Descriptive_Statistics.R",
+            "target": "HotelCondition.png"
         }
     ]
 }
