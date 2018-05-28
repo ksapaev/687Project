@@ -98,6 +98,9 @@
         },
         {
             "name": "CheckIn.png"
+        },
+        {
+            "name": "HotelCondition.png"
         }
     ],
     "edges": [
