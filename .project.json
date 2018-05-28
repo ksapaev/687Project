@@ -224,6 +224,10 @@
         {
             "source": "Descriptive_Statistics.R",
             "target": "RoomSatisfaction.png"
+        },
+        {
+            "source": "Descriptive_Statistics.R",
+            "target": "CheckIn.png"
         }
     ]
 }
