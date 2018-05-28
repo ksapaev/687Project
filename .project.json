@@ -189,6 +189,10 @@
         {
             "source": "data.csv",
             "target": "Visualization.R"
+        },
+        {
+            "source": "Visualization.R",
+            "target": "boxplot_LTR_Satisfaction.png"
         }
     ]
 }
