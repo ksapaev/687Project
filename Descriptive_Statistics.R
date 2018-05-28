@@ -168,8 +168,9 @@ dev.off()
 
 ####################################
 ##### write output file ############
-# add your R code to write HotelCondition.png
+# add your R code to write CustomerService.png
 ####################################
+
 
 
 
