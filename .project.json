@@ -86,6 +86,9 @@
         },
         {
             "name": "map_usa_LTR.png"
+        },
+        {
+            "name": "map_usa_Detractor.png"
         }
     ],
     "edges": [
