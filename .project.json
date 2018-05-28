@@ -147,6 +147,10 @@
         {
             "source": "LM_CheckOut.R",
             "target": "LTR_CustomerService.png"
+        },
+        {
+            "source": "LM_CheckOut.R",
+            "target": "LTR_All.png"
         }
     ]
 }
