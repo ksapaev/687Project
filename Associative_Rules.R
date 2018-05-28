@@ -15,6 +15,7 @@ library(dplyr)
 #Create Dataframe with appropriate columns
 NewDF <- df %>% select(LengthStay, Gender, AgeRange, GP_Tier, POV, StateAbb, Location, Country, NPS)
 
+#Converting as factor
 NewDF$LengthStay <- as.factor(NewDF$LengthStay)
 
 ## end your R code and logic 
