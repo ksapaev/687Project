@@ -14,8 +14,9 @@ df <- read.csv('data.csv')
 
 ####################################
 ##### write output file ############
-# add your R code to write LTR_RoomSatisfied.png
+# add your R code to write LTR_CustomerService.png
 ####################################
+
 
 
 
