@@ -97,8 +97,9 @@ dev.off()
 
 ####################################
 ##### write output file ############
-# add your R code to write ProConfidence.png
+# add your R code to write GoodRulesDetractor.png
 ####################################
+
 
 
 
