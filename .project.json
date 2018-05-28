@@ -119,6 +119,10 @@
         {
             "source": "Associative_Analyses.R",
             "target": "Frequency.png"
+        },
+        {
+            "source": "data.csv",
+            "target": "LM_CheckOut.R"
         }
     ]
 }
