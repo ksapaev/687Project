@@ -5,7 +5,7 @@ setwd(Sys.getenv('PROJECT_HOME'))
 
 ####################################
 ## write code to read input csv into data frame
-NewDF <- read.csv('rules_data.csv')
+df <- read.csv('rules_data.csv')
 ####################################
 
 ## start writing your R code from here
@@ -18,7 +18,7 @@ library(kernlab)
 ##RIGHT HAND SIDE as NPS types (Detractor, Passive, or Promoter)
 
 #Creating a transaction from the dataset
-trans <- as(NewDF, "transactions")
+trans <- as(df, "transactions")
 summary(trans)
 itemLabels(trans)
 
@@ -101,8 +101,9 @@ dev.off()
 
 ####################################
 ##### write output file ############
-# add your R code to write GoodRulesPromoter.png
+# add your R code to write Frequency.png
 ####################################
+
 
 
 

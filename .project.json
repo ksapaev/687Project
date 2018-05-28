@@ -35,6 +35,21 @@
         },
         {
             "name": "GoodRulesPromoter.png"
+        },
+        {
+            "name": "LM_CheckIn.R"
+        },
+        {
+            "name": "LTR_CheckIn.png"
+        },
+        {
+            "name": "LTR_HC.png"
+        },
+        {
+            "name": "LTR_CheckIn_HC.png"
+        },
+        {
+            "name": "Frequency.png"
         }
     ],
     "edges": [
@@ -81,6 +96,26 @@
         {
             "source": "Associative_Analyses.R",
             "target": "GoodRulesPromoter.png"
+        },
+        {
+            "source": "data.csv",
+            "target": "LM_CheckIn.R"
+        },
+        {
+            "source": "LM_CheckIn.R",
+            "target": "LTR_CheckIn.png"
+        },
+        {
+            "source": "LM_CheckIn.R",
+            "target": "LTR_HC.png"
+        },
+        {
+            "source": "LM_CheckIn.R",
+            "target": "LTR_CheckIn_HC.png"
+        },
+        {
+            "source": "Associative_Analyses.R",
+            "target": "Frequency.png"
         }
     ]
 }
