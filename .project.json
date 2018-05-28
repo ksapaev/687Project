@@ -65,6 +65,21 @@
         },
         {
             "name": "LTR_All.png"
+        },
+        {
+            "name": "SVM.R"
+        },
+        {
+            "name": "Histogram.png"
+        },
+        {
+            "name": "NPS.R"
+        },
+        {
+            "name": "Descriptive_Statistics.R"
+        },
+        {
+            "name": "Visualization.R"
         }
     ],
     "edges": [
@@ -151,6 +166,26 @@
         {
             "source": "LM_CheckOut.R",
             "target": "LTR_All.png"
+        },
+        {
+            "source": "data.csv",
+            "target": "SVM.R"
+        },
+        {
+            "source": "SVM.R",
+            "target": "Histogram.png"
+        },
+        {
+            "source": "data.csv",
+            "target": "NPS.R"
+        },
+        {
+            "source": "data.csv",
+            "target": "Descriptive_Statistics.R"
+        },
+        {
+            "source": "data.csv",
+            "target": "Visualization.R"
         }
     ]
 }
