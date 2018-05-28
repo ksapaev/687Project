@@ -129,6 +129,10 @@
         {
             "source": "data.csv",
             "target": "LM_CheckOut.R"
+        },
+        {
+            "source": "LM_CheckOut.R",
+            "target": "LTR_StaffCared.png"
         }
     ]
 }
