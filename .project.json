@@ -91,7 +91,7 @@
             "name": "map_usa_Detractor.png"
         },
         {
-            "name": "HistogramLTR.png"
+            "name": "LTR.png"
         }
     ],
     "edges": [
@@ -213,7 +213,7 @@
         },
         {
             "source": "Descriptive_Statistics.R",
-            "target": "HistogramLTR.png"
+            "target": "LTR.png"
         }
     ]
 }
