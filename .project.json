@@ -196,6 +196,10 @@
         {
             "source": "Visualization.R",
             "target": "boxplot_LTR_Satisfaction.png"
+        },
+        {
+            "source": "Visualization.R",
+            "target": "map_usa_LTR.png"
         }
     ]
 }
