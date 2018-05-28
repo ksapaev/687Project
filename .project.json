@@ -203,6 +203,10 @@
         {
             "source": "Visualization.R",
             "target": "map_usa_LTR.png"
+        },
+        {
+            "source": "Visualization.R",
+            "target": "map_usa_Detractor.png"
         }
     ]
 }
