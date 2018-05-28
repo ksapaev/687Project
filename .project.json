@@ -68,6 +68,9 @@
         },
         {
             "name": "SVM.R"
+        },
+        {
+            "name": "Histogram.png"
         }
     ],
     "edges": [
