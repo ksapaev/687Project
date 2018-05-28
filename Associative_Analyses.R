@@ -10,6 +10,9 @@ NewDF <- read.csv('rules_data.csv')
 
 ## start writing your R code from here
 
+library(ggplot2)
+library(arules)
+library(arulesViz)
 
 ##RIGHT HAND SIDE as NPS types (Detractor, Passive, or Promoter)
 
