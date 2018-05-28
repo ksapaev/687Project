@@ -43,7 +43,7 @@ length(testData$NPS)
 svmOut <- ksvm(NPS ~ ., data=trainData, kernel="rbfdot", kpar="automatic", C=5, cross=3, prob.model=TRUE)
 
 #Histogram of support vectors
-png(filename="Histogram.png", width=800, height=600)
+png(filename="Histogram.png", width=850, height=600)
 hist(alpha(svmOut)[[1]], main="Support vector histogram with C=5", xlab="Support vector values")
 dev.off()
 
