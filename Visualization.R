@@ -75,17 +75,22 @@ point <- data.frame(state=point.state, lon=point.lon, lat=point.lat)
 
 #Adding geopoints to the dataframes LTR/Detractors
 LTRmeans <- LTRmeans %>% mutate(lat=point$lat[match(tolower(point$state),state)], lon=point$lon[match(tolower(point$state),state)])
+Detractors <- Detractors %>% mutate(lat=point$lat[match(tolower(point$state),state)], lon=point$lon[match(tolower(point$state),state)])
 
 
 #Reappointing latitude and longitude for Alaska
 LTRmeans$lon <- ifelse(LTRmeans$state == "alaska", -117.404419, LTRmeans$lon)
 LTRmeans$lat <- ifelse(LTRmeans$state == "alaska", 28.370716, LTRmeans$lat)
+Detractors$lon <- ifelse(Detractors$state == "alaska", -117.404419, Detractors$lon)
+Detractors$lat <- ifelse(Detractors$state == "alaska", 28.370716, Detractors$lat)
 
 #Reappointing latitude and longitude for Hawaii
 LTRmeans$lon <- ifelse(LTRmeans$state == "hawaii", -104.498337, LTRmeans$lon)
 LTRmeans$lat <- ifelse(LTRmeans$state == "hawaii", 24.094318, LTRmeans$lat)
+Detractors$lon <- ifelse(Detractors$state == "hawaii", -104.498337, Detractors$lon)
+Detractors$lat <- ifelse(Detractors$state == "hawaii", 24.094318, Detractors$lat)
 
-#Drawing a graph on US map, adding layers
+#Drawing a graph of LTR on US map, adding layers
 USmap <- ggplot(LTRmeans, aes(map_id = state)) + geom_map(map = fifty_states, aes(fill=LTR), color="black") 
 USmap <- USmap + expand_limits(x = fifty_states$long, y = fifty_states$lat)
 USmap <- USmap + coord_map() + ggtitle("Map of the USA filled by mean LTR")
@@ -104,6 +109,24 @@ USmap
 dev.off()
 
 
+#Drawing a graph of Detractors on US map, adding layers
+USmapDet <- ggplot(Detractors, aes(map_id = state)) + geom_map(map = fifty_states, aes(fill=Detractor), color="black") 
+USmapDet <- USmapDet + expand_limits(x = fifty_states$long, y = fifty_states$lat)
+USmapDet <- USmapDet + coord_map() + ggtitle("Map of the USA filled by number of Detractors")
+USmapDet <- USmapDet + fifty_states_inset_boxes() 
+USmapDet <- USmapDet + scale_fill_gradient(low = "lightblue",high = "darkblue")
+
+#Adding a layer with points
+USmapDet <- USmapDet + geom_point(data=Detractors, aes(x=lon, y=lat, color=Detractor)) + scale_colour_gradient(low = 'yellow', high='red')
+
+#Scaling points by radius
+USmapDet <- USmapDet + scale_radius(aes(size=Detractors$Detractor))
+
+# Creating png for the map.
+png(filename="map_usa_Detractor.png", width=800, height=600)
+USmapDet
+dev.off()
+
 ## end your R code and logic 
 
 ####################################
@@ -112,8 +135,5 @@ dev.off()
 ####################################
 
 
-		
-		
-		
 		
 		
