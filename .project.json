@@ -94,6 +94,10 @@
         {
             "source": "data.csv",
             "target": "LM_CheckIn.R"
+        },
+        {
+            "source": "LM_CheckIn.R",
+            "target": "LTR_CheckIn.png"
         }
     ]
 }
