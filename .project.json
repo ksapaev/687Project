@@ -83,6 +83,9 @@
         },
         {
             "name": "boxplot_LTR_Satisfaction.png"
+        },
+        {
+            "name": "map_usa_LTR.png"
         }
     ],
     "edges": [
