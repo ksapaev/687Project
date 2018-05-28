@@ -37,7 +37,7 @@ NPS(LTR1)
 NPS(LTR2)
 
 #Calculating the difference
-NPS(LTR1) - NPS(LTR2)
+NPS(LTR2) - NPS(LTR1)
 
 ## end your R code and logic 
 
