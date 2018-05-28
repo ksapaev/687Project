@@ -245,6 +245,10 @@
         {
             "source": "Descriptive_Statistics.R",
             "target": "CustomerService.png"
+        },
+        {
+            "source": "Descriptive_Statistics.R",
+            "target": "StaffCared.png"
         }
     ]
 }
