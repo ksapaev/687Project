@@ -10,11 +10,12 @@ df <- read.csv('data.csv')
 
 ## start writing your R code from here
 
+library(dplyr)
+
 #Create Dataframe with appropriate columns
-NewDF <- data.frame(LengthOfStay=df$LengthStay, Gender=df$Gender, AgeRange=df$AgeRange, GPTier=df$GP_Tier, PurposeOfVisit = df$POV,
-                    State = df$StateAbb, Location = df$Location, Country = df$Country, NPS = df$NPS)
+NewDF <- df %>% select(LengthStay, Gender, AgeRange, GP_Tier, POV, StateAbb, Location, Country, NPS)
 
-
+NewDF$LengthStay <- as.factor(NewDF$LengthStay)
 
 ## end your R code and logic 
 
