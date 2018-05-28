@@ -83,6 +83,12 @@
         },
         {
             "name": "boxplot_LTR_Satisfaction.png"
+        },
+        {
+            "name": "map_usa_LTR.png"
+        },
+        {
+            "name": "map_usa_Detractor.png"
         }
     ],
     "edges": [
@@ -193,6 +199,14 @@
         {
             "source": "Visualization.R",
             "target": "boxplot_LTR_Satisfaction.png"
+        },
+        {
+            "source": "Visualization.R",
+            "target": "map_usa_LTR.png"
+        },
+        {
+            "source": "Visualization.R",
+            "target": "map_usa_Detractor.png"
         }
     ]
 }
