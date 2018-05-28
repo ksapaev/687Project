@@ -133,7 +133,8 @@ hist(rnorm(length(df$Revenue), mean = mean(df$Revenue), sd = sd(df$Revenue)), ma
 
 ####################################
 ##### write output file ############
-# add your R code to write output file
+# add your R code to write HistogramLTR.png
 ####################################
+
 
 
