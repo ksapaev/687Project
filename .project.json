@@ -45,6 +45,10 @@
         {
             "source": "rules_data.csv",
             "target": "Associative_Analyses.R"
+        },
+        {
+            "source": "Associative_Analyses.R",
+            "target": "DetSupport.png"
         }
     ]
 }
