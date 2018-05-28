@@ -16,12 +16,8 @@ library(modeest)
 #Statistics for LTR
 
 summary(df$LTR)
-mean(df$LTR)
 sd(df$LTR)
-
-median(df$LTR)
 mfv(df$LTR)
-
 quantile(df$LTR, probs=c(0.01, 0.05, 0.1, 0.25, 0.5, 0.75, 0.9, 0.95, 0.99))
 
 
@@ -29,12 +25,8 @@ quantile(df$LTR, probs=c(0.01, 0.05, 0.1, 0.25, 0.5, 0.75, 0.9, 0.95, 0.99))
 #Statistics for Overall Satisfaction
 
 summary(df$Overall_Satisfaction)
-mean(df$Overall_Satisfaction)
 sd(df$Overall_Satisfaction)
-
-median(df$Overall_Satisfaction)
 mfv(df$Overall_Satisfaction)
-
 quantile(df$Overall_Satisfaction, probs=c(0.01, 0.05, 0.1, 0.25, 0.5, 0.75, 0.9, 0.95, 0.99))
 
 
@@ -42,11 +34,8 @@ quantile(df$Overall_Satisfaction, probs=c(0.01, 0.05, 0.1, 0.25, 0.5, 0.75, 0.9,
 #Statistics for Hotel Condition
 
 summary(df$Hotel_Condition)
-
 sd(df$Hotel_Condition)
-
 mfv(df$Hotel_Condition)
-
 quantile(df$Hotel_Condition, probs=c(0.01, 0.05, 0.1, 0.25, 0.5, 0.75, 0.9, 0.95, 0.99))
 
 
@@ -54,11 +43,8 @@ quantile(df$Hotel_Condition, probs=c(0.01, 0.05, 0.1, 0.25, 0.5, 0.75, 0.9, 0.95
 #Statistics for Staff Cared
 
 summary(df$Staff_Cared)
-
 sd(df$Staff_Cared)
-
 mfv(df$Staff_Cared)
-
 quantile(df$Staff_Cared, probs=c(0.01, 0.05, 0.1, 0.25, 0.5, 0.75, 0.9, 0.95, 0.99))
 
 
@@ -66,11 +52,8 @@ quantile(df$Staff_Cared, probs=c(0.01, 0.05, 0.1, 0.25, 0.5, 0.75, 0.9, 0.95, 0.
 #Statistics for Customer Service
 
 summary(df$Customer_Service)
-
 sd(df$Customer_Service)
-
 mfv(df$Customer_Service)
-
 quantile(df$Customer_Service, probs=c(0.01, 0.05, 0.1, 0.25, 0.5, 0.75, 0.9, 0.95, 0.99))
 
 
@@ -78,11 +61,8 @@ quantile(df$Customer_Service, probs=c(0.01, 0.05, 0.1, 0.25, 0.5, 0.75, 0.9, 0.9
 #Statistics for Check In
 
 summary(df$CheckIn)
-
 sd(df$CheckIn)
-
 mfv(df$CheckIn)
-
 quantile(df$CheckIn, probs=c(0.01, 0.05, 0.1, 0.25, 0.5, 0.75, 0.9, 0.95, 0.99))
 
 
@@ -90,11 +70,8 @@ quantile(df$CheckIn, probs=c(0.01, 0.05, 0.1, 0.25, 0.5, 0.75, 0.9, 0.95, 0.99))
 #Statistics for Guest Room Satisfaction
 
 summary(df$Room_Satisfy)
-
 sd(df$Room_Satisfy)
-
 mfv(df$Room_Satisfy)
-
 quantile(df$Room_Satisfy, probs=c(0.01, 0.05, 0.1, 0.25, 0.5, 0.75, 0.9, 0.95, 0.99))
 
 
@@ -102,11 +79,8 @@ quantile(df$Room_Satisfy, probs=c(0.01, 0.05, 0.1, 0.25, 0.5, 0.75, 0.9, 0.95, 0
 #Statistics for Length of Stay
 
 summary(df$LengthStay)
-
 sd(df$LengthStay)
-
 mfv(df$LengthStay)
-
 quantile(df$LengthStay, probs=c(0.01, 0.05, 0.1, 0.25, 0.5, 0.75, 0.9, 0.95, 0.99))
 
 hist(rnorm(length(df$LengthStay), mean = mean(df$LengthStay), sd = sd(df$LengthStay)), main = "Normal Distribution",
@@ -117,11 +91,8 @@ hist(rnorm(length(df$LengthStay), mean = mean(df$LengthStay), sd = sd(df$LengthS
 #Statistics for Revenue
 
 summary(df$Revenue)
-
 sd(df$Revenue)
-
 mfv(df$Revenue)
-
 quantile(df$Revenue, probs=c(0.01, 0.05, 0.1, 0.25, 0.5, 0.75, 0.9, 0.95, 0.99))
 
 hist(rnorm(length(df$Revenue), mean = mean(df$Revenue), sd = sd(df$Revenue)), main = "Normal Distribution",
@@ -129,12 +100,75 @@ hist(rnorm(length(df$Revenue), mean = mean(df$Revenue), sd = sd(df$Revenue)), ma
 
 
 
+#Histograms
+png(filename="LTR.png", width=800, height=600)
+HistogramLTR <- hist(df$LTR, main="Histogram for Likelihood to recommend", xlab= "Likelihood to Recommend", border="blue", col="orange",
+                     xlim=c(0,10), las=1, breaks=15)
+dev.off()
+
+png(filename="RoomSatisfaction.png", width=800, height=600)
+HistogramRoomSat <- hist(data$Room_Satisfy, main="Histogram for Room Satisfaction", xlab= "Room Satisfaction", border="blue", col="green",
+                         xlim=c(0,10), las=1, breaks=15)
+dev.off()
+
+png(filename="CheckIn.png", width=800, height=600)
+HistogramCheckIn <- hist(data$CheckIn, main="Histogram for Check in", xlab= "Check In", border="blue", col="yellow",
+                         xlim=c(0,10), las=1, breaks=15)
+dev.off()
+
+
+HistogramHotelC <- hist(data$Hotel_Condition, 
+                        main="Histogram for Hotel Condition", 
+                        xlab= "Hotel Condition", 
+                        border="blue", 
+                        col="purple",
+                        xlim=c(0,10),
+                        las=1, 
+                        breaks=15)
+
+HistogramCustServ <- hist(data$Customer_Service, 
+                          main="Histogram for Customer Service", 
+                          xlab= "Customer Service", 
+                          border="blue", 
+                          col="red",
+                          xlim=c(0,10),
+                          las=1, 
+                          breaks=15)
+
+HistogramStaffCared <- hist(data$Staff_Cared, 
+                            main="Histogram for Staff Cared", 
+                            xlab= "Staff Care", 
+                            border="blue", 
+                            col="grey",
+                            xlim=c(0,10),
+                            las=1, 
+                            breaks=15)
+#Create PNG file
+
+
+
+
+
+
+
+png(filename="HistogramHotelC.png", width=800, height=600)
+plot(HistogramHotelC)
+dev.off()
+
+png(filename="HistogramCustServ.png", width=800, height=600)
+plot(HistogramCustServ)
+dev.off()
+
+png(filename="HistogramStaffCared.png", width=800, height=600)
+plot(HistogramStaffCared)
+dev.off()
+
+
 ## end your R code and logic 
 
 ####################################
 ##### write output file ############
-# add your R code to write HistogramLTR.png
+# add your R code to write output file
 ####################################
-
 
 
