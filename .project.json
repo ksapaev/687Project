@@ -44,6 +44,9 @@
         },
         {
             "name": "LTR_HC.png"
+        },
+        {
+            "name": "LTR_CheckIn_HC.png"
         }
     ],
     "edges": [
