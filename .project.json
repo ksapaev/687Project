@@ -38,6 +38,9 @@
         },
         {
             "name": "LM_CheckIn.R"
+        },
+        {
+            "name": "LTR_CheckIn.png"
         }
     ],
     "edges": [
