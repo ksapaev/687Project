@@ -220,6 +220,10 @@
         {
             "source": "Descriptive_Statistics.R",
             "target": "LTR.png"
+        },
+        {
+            "source": "Descriptive_Statistics.R",
+            "target": "RoomSatisfaction.png"
         }
     ]
 }
