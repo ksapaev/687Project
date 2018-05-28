@@ -84,6 +84,10 @@
         {
             "source": "Associative_Analyses.R",
             "target": "GoodRulesPromoter.png"
+        },
+        {
+            "source": "data.csv",
+            "target": "LM_CheckIn.R"
         }
     ]
 }
