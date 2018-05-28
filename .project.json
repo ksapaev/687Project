@@ -50,6 +50,21 @@
         },
         {
             "name": "Frequency.png"
+        },
+        {
+            "name": "LM_CheckOut.R"
+        },
+        {
+            "name": "LTR_StaffCared.png"
+        },
+        {
+            "name": "LTR_RoomSatisfied.png"
+        },
+        {
+            "name": "LTR_CustomerService.png"
+        },
+        {
+            "name": "LTR_All.png"
         }
     ],
     "edges": [
@@ -116,6 +131,26 @@
         {
             "source": "Associative_Analyses.R",
             "target": "Frequency.png"
+        },
+        {
+            "source": "data.csv",
+            "target": "LM_CheckOut.R"
+        },
+        {
+            "source": "LM_CheckOut.R",
+            "target": "LTR_StaffCared.png"
+        },
+        {
+            "source": "LM_CheckOut.R",
+            "target": "LTR_RoomSatisfied.png"
+        },
+        {
+            "source": "LM_CheckOut.R",
+            "target": "LTR_CustomerService.png"
+        },
+        {
+            "source": "LM_CheckOut.R",
+            "target": "LTR_All.png"
         }
     ]
 }

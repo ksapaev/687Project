@@ -17,10 +17,6 @@ library(arulesViz)
 
 ##RIGHT HAND SIDE as NPS types (Detractor, Passive, or Promoter)
 
-#Removing auto-generated index column
-newdf <- newdf[,-1]
-#Converting first column as factor
-newdf$LengthOfStay <- factor(newdf[ ,1])
 
 #Creating a transaction from the dataset
 trans <- as(newdf, "transactions")
