@@ -26,8 +26,9 @@ dev.off()
 
 ####################################
 ##### write output file ############
-# add your R code to write boxplot_LTR_Satisfaction.png
+# add your R code to write map_usa_LTR.png
 ####################################
+
 
 
 
