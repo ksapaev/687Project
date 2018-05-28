@@ -47,6 +47,9 @@ project$StateRegion <- state.region[match(project$StateAbb, state.abb)]
 #Counting row names from beginning
 rownames(project) <- NULL
 
+#Removing auto-generated column
+project <- project[,-1]
+
 #str(project)
 #str(project$GP_Tier)
 #head(project,20)
