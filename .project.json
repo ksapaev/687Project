@@ -89,6 +89,9 @@
         },
         {
             "name": "map_usa_Detractor.png"
+        },
+        {
+            "name": "LTR.png"
         }
     ],
     "edges": [
@@ -207,6 +210,10 @@
         {
             "source": "Visualization.R",
             "target": "map_usa_Detractor.png"
+        },
+        {
+            "source": "Descriptive_Statistics.R",
+            "target": "LTR.png"
         }
     ]
 }
