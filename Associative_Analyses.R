@@ -18,6 +18,7 @@ library(arulesViz)
 ##RIGHT HAND SIDE as NPS types (Detractor, Passive, or Promoter)
 
 #Converting first column as factor
+newdf <- newdf[,-1]
 newdf$LengthOfStay <- factor(newdf[ ,1])
 
 #Creating a transaction from the dataset
