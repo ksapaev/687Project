@@ -92,6 +92,21 @@
         },
         {
             "name": "LTR.png"
+        },
+        {
+            "name": "RoomSatisfaction.png"
+        },
+        {
+            "name": "CheckIn.png"
+        },
+        {
+            "name": "HotelCondition.png"
+        },
+        {
+            "name": "CustomerService.png"
+        },
+        {
+            "name": "StaffCared.png"
         }
     ],
     "edges": [
@@ -214,6 +229,26 @@
         {
             "source": "Descriptive_Statistics.R",
             "target": "LTR.png"
+        },
+        {
+            "source": "Descriptive_Statistics.R",
+            "target": "RoomSatisfaction.png"
+        },
+        {
+            "source": "Descriptive_Statistics.R",
+            "target": "CheckIn.png"
+        },
+        {
+            "source": "Descriptive_Statistics.R",
+            "target": "HotelCondition.png"
+        },
+        {
+            "source": "Descriptive_Statistics.R",
+            "target": "CustomerService.png"
+        },
+        {
+            "source": "Descriptive_Statistics.R",
+            "target": "StaffCared.png"
         }
     ]
 }
