@@ -161,6 +161,10 @@
         {
             "source": "data.csv",
             "target": "SVM.R"
+        },
+        {
+            "source": "SVM.R",
+            "target": "Histogram.png"
         }
     ]
 }
