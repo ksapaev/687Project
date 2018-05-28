@@ -77,6 +77,10 @@
         {
             "source": "Associative_Analyses.R",
             "target": "GoodRulesDetractor.png"
+        },
+        {
+            "source": "Associative_Analyses.R",
+            "target": "GoodRulesPromoter.png"
         }
     ]
 }
