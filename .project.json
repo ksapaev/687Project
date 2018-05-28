@@ -22,9 +22,6 @@
             "name": "DetSupport.png"
         },
         {
-            "name": "DetConfidence.png"
-        },
-        {
             "name": "ProSupport.png"
         },
         {
@@ -133,10 +130,6 @@
         {
             "source": "Associative_Analyses.R",
             "target": "DetSupport.png"
-        },
-        {
-            "source": "Associative_Analyses.R",
-            "target": "DetConfidence.png"
         },
         {
             "source": "Associative_Analyses.R",
