@@ -97,7 +97,8 @@ dev.off()
 
 ####################################
 ##### write output file ############
-# add your R code to write output file
+# add your R code to write DetSupport.png
 ####################################
+
 
 
