@@ -20,6 +20,9 @@
         },
         {
             "name": "DetSupport.png"
+        },
+        {
+            "name": "DetConfidence.png"
         }
     ],
     "edges": [
