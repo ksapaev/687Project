@@ -210,6 +210,10 @@
         {
             "source": "Visualization.R",
             "target": "map_usa_Detractor.png"
+        },
+        {
+            "source": "Descriptive_Statistics.R",
+            "target": "HistogramLTR.png"
         }
     ]
 }
