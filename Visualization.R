@@ -26,11 +26,19 @@ dev.off()
 
 
 
-#Creating proper y and x axis with plot for Revenue compared Age Range
+#Creating a plot for Revenue compared Age Range
 myPlotAgeRev <- ggplot(df, aes(x= AgeRange, y= Revenue))+ geom_col( fill="black") + ggtitle("Revenue compared to Age Range" )
 
 png(filename="RevenueAge.png", width=800, height=600)
 myPlotAgeRev
+dev.off()
+
+
+#Creating a plot for Revenue compared Length of Stay
+myPlotStayRev <- ggplot(df, aes(x= LengthStay, y= Revenue))+ geom_col( fill="darkred") + ggtitle("Revenue compared to Length of Stay" )
+
+png(filename="RevenueStay.png", width=800, height=600)
+myPlotStayRev
 dev.off()
 
 ##################################
