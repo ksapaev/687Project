@@ -84,6 +84,31 @@ barchart2
 dev.off()
 
 
+
+
+#Generating a heatmap where we take x for hotel condition, y for room satisfaction.
+#Colors range from white to blue depending on fil value of LTR.
+myPlotHeat <- ggplot(df, aes(x=Hotel_Condition, y=Room_Satisfy, fill=LTR)) + geom_tile(color = "white") 
+myPlotHeat <- myPlotHeat + scale_fill_gradient(low="white", high="darkblue", space = "Lab", name="LTR") + xlab("Hotel condition") + ylab("Guest Room satisfaction")
+myPlotHeat <- myPlotHeat + coord_fixed() + theme_minimal() + scale_x_continuous( breaks = 1:10)+ scale_y_continuous( breaks = 1:10)
+
+#Creating the png file of the heatmap
+png(filename="heat_hc_rs.png")
+myPlotHeat
+dev.off()
+
+
+#Generating a heatmap where we take x for customer service, y for check in.
+#Colors range from white to blue depending on fil value of LTR.
+myPlotHeat2 <- ggplot(df, aes(x=Customer_Service, y=CheckIn, fill=LTR)) + geom_tile(color = "white") 
+myPlotHeat2 <- myPlotHeat2 + scale_fill_gradient(low="white", high="darkred", space = "Lab", name="LTR") + xlab("Customer Service") + ylab("Check In")
+myPlotHeat2 <- myPlotHeat2 + coord_fixed() + theme_minimal() + scale_x_continuous( breaks = 1:10)+ scale_y_continuous( breaks = 1:10)
+
+#Creating the png file of the heatmap
+png(filename="heat_cs_ch.png")
+myPlotHeat2
+dev.off()
+
 #########################################################################
 
 #Calculating mean LTR/Number of Detractors for each state
@@ -185,11 +210,12 @@ dev.off()
 
 ####################################
 ##### write output file ############
-# add your R code to write Region.png
+# add your R code to write heat_hc_rs.png
 ####################################
 
 
 		
+
 
 
 

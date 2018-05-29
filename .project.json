@@ -113,6 +113,12 @@
         },
         {
             "name": "Region.png"
+        },
+        {
+            "name": "heat_hc_rs.png"
+        },
+        {
+            "name": "heat_cs_ch.png"
         }
     ],
     "edges": [
@@ -263,6 +269,14 @@
         {
             "source": "Visualization.R",
             "target": "Region.png"
+        },
+        {
+            "source": "Visualization.R",
+            "target": "heat_hc_rs.png"
+        },
+        {
+            "source": "Visualization.R",
+            "target": "heat_cs_ch.png"
         }
     ]
 }
