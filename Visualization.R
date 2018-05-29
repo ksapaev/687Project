@@ -43,12 +43,11 @@ dev.off()
 
 ##################################
 
-
+#Promoter/Detractor by Purpose of Visit
 promoters <- df[df$NPS=="Promoter",]
 detractors <- df[df$NPS=="Detractor",]
 
 proPOV <- tapply(promoters$NPS, promoters$POV, length)
-
 detPOV <- tapply(detractors$NPS, detractors$POV, length)
 
 POV <- data.frame(pov=names(proPOV), promoters=as.numeric(proPOV), detractors=as.numeric(detPOV))
@@ -57,11 +56,31 @@ rownames(POV) <- NULL
 POV <- melt(POV)
 
 barchart <- ggplot(POV, aes(x= pov, y= value, fill=variable)) + geom_bar(stat="identity", width=0.8, position = "dodge")
-barchart <- barchart + xlab("Purpose of Visit") + ylab("Promoter/Detractor counts") +  theme_minimal() + ggtitle("Promoter/Detractor by Purpose of Visit")
+barchart <- barchart + xlab("") + ylab("Number of Promoter/Detractor") +  theme_minimal() + ggtitle("Promoter/Detractor by Purpose of Visit")
 barchart <- barchart + theme(legend.position="bottom") + theme(legend.title=element_blank())
 barchart <- barchart + scale_fill_manual(POV$variable,values=c("#5A7247","#B76BA3")) 
+
 png(filename="POV.png", width=800, height=600)
 barchart
+dev.off()
+
+#Promoter/Detractor by Region
+
+proRegion <- tapply(promoters$NPS, promoters$StateRegion, length)
+detRegion <- tapply(detractors$NPS, detractors$StateRegion, length)
+
+Region <- data.frame(region=names(proRegion), promoters=as.numeric(proRegion), detractors=as.numeric(detRegion))
+rownames(Region) <- NULL
+
+Region <- melt(Region)
+
+barchart2 <- ggplot(Region, aes(x= region, y= value, fill=variable)) + geom_bar(stat="identity", width=0.8, position = "dodge")
+barchart2 <- barchart2 + xlab("") + ylab("Number of Promoter/Detractor") +  theme_minimal() + ggtitle("Promoter/Detractor by Regions")
+barchart2 <- barchart2 + theme(legend.position="bottom") + theme(legend.title=element_blank())
+barchart2 <- barchart2 + scale_fill_manual(Region$variable,values=c("#5A7247","#B76BA3")) 
+
+png(filename="Region.png", width=800, height=600)
+barchart2
 dev.off()
 
 
