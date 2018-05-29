@@ -149,9 +149,10 @@ dev.off()
 
 ####################################
 ##### write output file ############
-# add your R code to write map_usa_Detractor.png
+# add your R code to write POV.png
 ####################################
 
 
 		
+
 
