@@ -266,6 +266,10 @@
         {
             "source": "Visualization.R",
             "target": "Region.png"
+        },
+        {
+            "source": "Visualization.R",
+            "target": "heat_hc_rs.png"
         }
     ]
 }
