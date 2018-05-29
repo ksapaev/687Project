@@ -13,6 +13,7 @@ library(dplyr)
 library(ggplot2)
 library(ggmap)
 library(fiftystater)
+library(reshape2)
 
 # Creating a box plot
 myboxPlot <- ggplot(df, aes(x=Overall_Satisfaction, y=LTR)) + geom_boxplot(fill="yellow", col="black")
@@ -26,16 +27,25 @@ dev.off()
 ##################################
 
 
+promoters <- df[df$NPS=="Promoter",]
+detractors <- df[df$NPS=="Detractor",]
 
+proPOV <- tapply(promoters$NPS, promoters$POV, length)
 
-#HEatmap
-#POV LTR
-#GENDer LTR
+detPOV <- tapply(detractors$NPS, detractors$POV, length)
 
+POV <- data.frame(pov=names(proPOV), promoters=as.numeric(proPOV), detractors=as.numeric(detPOV))
+rownames(POV) <- NULL
 
+POV <- melt(POV)
 
+barchart <- ggplot(POV, aes(x= pov, y= value, fill=variable)) + geom_bar(stat="identity", width=0.8, position = "dodge")
+barchart <- barchart + xlab("Purpose of Visit") + ylab("Promoter/Detractor counts") +  theme_minimal() + ggtitle("Promoter/Detractor by Purpose of Visit")
+barchart <- barchart + scale_fill_manual(POV$variable,values=c("#5A7247","#B76BA3")) 
 
-
+png(filename="POV.png", width=800, height=600)
+barchart
+dev.off()
 
 
 #########################################################################
