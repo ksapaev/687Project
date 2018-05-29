@@ -131,8 +131,8 @@ USmapDet
 dev.off()
 
 
-
-
+#LTRmeans[order(LTRmeans$LTR),]
+#Detractors[order(Detractors$Detractor),]
 
 
 ## end your R code and logic 
