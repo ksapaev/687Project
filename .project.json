@@ -22,13 +22,7 @@
             "name": "DetSupport.png"
         },
         {
-            "name": "DetConfidence.png"
-        },
-        {
             "name": "ProSupport.png"
-        },
-        {
-            "name": "ProConfidence.png"
         },
         {
             "name": "GoodRulesDetractor.png"
@@ -136,15 +130,7 @@
         },
         {
             "source": "Associative_Analyses.R",
-            "target": "DetConfidence.png"
-        },
-        {
-            "source": "Associative_Analyses.R",
             "target": "ProSupport.png"
-        },
-        {
-            "source": "Associative_Analyses.R",
-            "target": "ProConfidence.png"
         },
         {
             "source": "Associative_Analyses.R",

@@ -11,7 +11,7 @@ df <- read.csv('data.csv')
 ## start writing your R code from here
 
 library(modeest)
-
+library(ggplot2)
 
 #Statistics for LTR
 
@@ -102,37 +102,37 @@ hist(rnorm(length(df$Revenue), mean = mean(df$Revenue), sd = sd(df$Revenue)), ma
 
 #Histograms
 png(filename="LTR.png", width=800, height=600)
-HistogramLTR <- hist(df$LTR, main="Histogram for Likelihood to recommend", xlab= "Likelihood to Recommend", border="blue", col="orange",
+hist(df$LTR, main="Histogram for Likelihood to recommend", xlab= "Likelihood to Recommend", border="blue", col="orange",
                      xlim=c(0,10), las=1, breaks=15)
 dev.off()
 
 
 png(filename="RoomSatisfaction.png", width=800, height=600)
-HistogramRoomSat <- hist(data$Room_Satisfy, main="Histogram for Room Satisfaction", xlab= "Room Satisfaction", border="blue", col="green",
+hist(data$Room_Satisfy, main="Histogram for Room Satisfaction", xlab= "Room Satisfaction", border="blue", col="green",
                          xlim=c(0,10), las=1, breaks=15)
 dev.off()
 
 
 png(filename="CheckIn.png", width=800, height=600)
-HistogramCheckIn <- hist(data$CheckIn, main="Histogram for Check in", xlab= "Check In", border="blue", col="yellow",
+hist(data$CheckIn, main="Histogram for Check in", xlab= "Check In", border="blue", col="yellow",
                          xlim=c(0,10), las=1, breaks=15)
 dev.off()
 
 
 png(filename="HotelCondition.png", width=800, height=600)
-HistogramHotelC <- hist(data$Hotel_Condition, main="Histogram for Hotel Condition", xlab= "Hotel Condition", border="blue", col="purple",
+hist(data$Hotel_Condition, main="Histogram for Hotel Condition", xlab= "Hotel Condition", border="blue", col="purple",
                         xlim=c(0,10), las=1, breaks=15)
 dev.off()
 
 
 png(filename="CustomerService.png", width=800, height=600)
-HistogramCustServ <- hist(data$Customer_Service, main="Histogram for Customer Service", xlab= "Customer Service", border="blue", col="red",
+hist(data$Customer_Service, main="Histogram for Customer Service", xlab= "Customer Service", border="blue", col="red",
                           xlim=c(0,10), las=1, breaks=15)
 dev.off()
 
 
 png(filename="StaffCared.png", width=800, height=600)
-HistogramStaffCared <- hist(data$Staff_Cared, main="Histogram for Staff Cared", xlab= "Staff Care", border="blue", col="grey",
+hist(data$Staff_Cared, main="Histogram for Staff Cared", xlab= "Staff Care", border="blue", col="grey",
                             xlim=c(0,10), las=1, breaks=15)
 dev.off()
 

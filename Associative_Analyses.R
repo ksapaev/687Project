@@ -53,9 +53,6 @@ png(filename="DetSupport.png", width=800, height=600)
 plot(top.support.det)
 dev.off()
 
-png(filename="DetConfidence.png", width=800, height=600)
-plot(top.confidence.det)
-dev.off()
 
 
 ###############
@@ -78,9 +75,6 @@ png(filename="ProSupport.png", width=800, height=600)
 plot(top.support.pro)
 dev.off()
 
-png(filename="ProConfidence.png", width=800, height=600)
-plot(top.confidence.pro)
-dev.off()
 
 
 ##############
