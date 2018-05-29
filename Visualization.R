@@ -84,6 +84,19 @@ barchart2
 dev.off()
 
 
+
+
+#Generating a heatmap where we take x for hotel condition, y for room satisfaction.
+#Colors range from white to blue depending on fil value of LTR.
+myPlotHeat <- ggplot(df, aes(x=Hotel_Condition, y=Room_Satisfy, fill=LTR)) + geom_tile(color = "white") 
+myPlotHeat <- myPlotHeat + scale_fill_gradient(low="white", high="blue", space = "Lab", name="LTR") + xlab("Hotel condition") + ylab("Guest Room satisfaction")
+myPlotHeat <- myPlotHeat + coord_fixed() + theme_minimal() + scale_x_continuous( breaks = 1:10)+ scale_y_continuous( breaks = 1:10)
+
+#Creating the png file of the heatmap
+png(filename="heat_hc_rs.png")
+myPlotHeat
+dev.off()
+
 #########################################################################
 
 #Calculating mean LTR/Number of Detractors for each state
