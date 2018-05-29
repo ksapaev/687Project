@@ -198,11 +198,12 @@ dev.off()
 
 ####################################
 ##### write output file ############
-# add your R code to write Region.png
+# add your R code to write heat_hc_rs.png
 ####################################
 
 
 		
+
 
 
 
