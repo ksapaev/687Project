@@ -57,11 +57,11 @@ data("fifty_states")
 
 
 #List of Latitudes and Longitudes for Every State
-point.state <- c("Alabama", "Alaska", "Arizona", "Arkansas", "California", "Colorado", "Connecticut", "Delaware", "Florida", "Georgia",
-                 "Hawaii", "Idaho", "Illinois", "Indiana", "Iowa", "Kansas", "Kentucky", "Louisiana", "Maine", "Maryland",
-                 "Massachusetts", "Michigan", "Minnesota", "Mississippi", "Missouri", "Montana", "Nebraska", "Nevada", "New Hampshire", "New Jersey",
-                 "New Mexico", "New York", "North Carolina", "North Dakota", "Ohio", "Oklahoma", "Oregon", "Pennsylvania", "Rhode Island", "South Carolina",
-                 "South Dakota", "Tennessee", "Texas", "Utah", "Vermont", "Virginia", "Washington", "West Virginia", "Wisconsin", "Wyoming")
+point.state <- c("alabama", "alaska", "arizona", "arkansas", "california", "colorado", "connecticut", "delaware", "florida", "georgia",
+                 "hawaii", "idaho", "illinois", "indiana", "iowa", "kansas", "kentucky", "louisiana", "maine", "maryland",
+                 "massachusetts", "michigan", "minnesota", "mississippi", "missouri", "montana", "nebraska", "nevada", "new hampshire", "new jersey",
+                 "new mexico", "new york", "north carolina", "north dakota", "ohio", "oklahoma", "oregon", "pennsylvania", "rhode island", "south carolina",
+                 "south dakota", "tennessee", "texas", "utah", "vermont", "virginia", "washington", "west virginia", "wisconsin", "wyoming")
 point.lat <- c(32.806671, 61.370716, 33.729759, 34.969704, 36.116203, 39.059811, 41.597782, 39.318523, 27.766279, 33.040619,
                21.094318, 44.240459, 40.349457, 39.849426, 42.011539, 38.526600, 37.668140, 31.169546, 44.693947, 39.063946,
                42.230171, 43.326618, 45.694454, 32.741646, 38.456085, 46.921925, 41.125370, 38.313515, 43.452492, 40.298904,
@@ -77,8 +77,8 @@ point <- data.frame(state=point.state, lon=point.lon, lat=point.lat)
 
 
 #Adding geopoints to the dataframes LTR/Detractors
-LTRmeans <- LTRmeans %>% mutate(lat=point$lat[match(tolower(point$state),state)], lon=point$lon[match(tolower(point$state),state)])
-Detractors <- Detractors %>% mutate(lat=point$lat[match(tolower(point$state),state)], lon=point$lon[match(tolower(point$state),state)])
+LTRmeans <- LTRmeans %>% mutate(lat=point$lat[match(state,point$state)], lon=point$lon[match(state,point$state)])
+Detractors <- Detractors %>% mutate(lat=point$lat[match(state,point$state)], lon=point$lon[match(state,point$state)])
 
 
 #Reappointing latitude and longitude for Alaska
@@ -129,6 +129,11 @@ USmapDet <- USmapDet + geom_point(data=Detractors, aes(x=lon, y=lat, color=Detra
 png(filename="map_usa_Detractor.png", width=800, height=600)
 USmapDet
 dev.off()
+
+
+
+
+
 
 ## end your R code and logic 
 
