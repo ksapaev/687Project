@@ -41,8 +41,8 @@ POV <- melt(POV)
 
 barchart <- ggplot(POV, aes(x= pov, y= value, fill=variable)) + geom_bar(stat="identity", width=0.8, position = "dodge")
 barchart <- barchart + xlab("Purpose of Visit") + ylab("Promoter/Detractor counts") +  theme_minimal() + ggtitle("Promoter/Detractor by Purpose of Visit")
+barchart <- barchart + theme(legend.position="bottom") + theme(legend.title=element_blank())
 barchart <- barchart + scale_fill_manual(POV$variable,values=c("#5A7247","#B76BA3")) 
-
 png(filename="POV.png", width=800, height=600)
 barchart
 dev.off()
