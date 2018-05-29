@@ -23,11 +23,11 @@ png(filename="boxplot_LTR_Satisfaction.png", width=600, height=600)
 myboxPlot
 dev.off()
 
+##################################
 
 
 
 
-#REvenue AgeRange
 #HEatmap
 #POV LTR
 #GENDer LTR
@@ -38,7 +38,7 @@ dev.off()
 
 
 
-
+#########################################################################
 
 #Calculating mean LTR/Number of Detractors for each state
 LTRmean <- tapply(df$LTR, df$StateAbb, mean)
@@ -131,8 +131,8 @@ USmapDet
 dev.off()
 
 
-
-
+#LTRmeans[order(LTRmeans$LTR),]
+#Detractors[order(Detractors$Detractor),]
 
 
 ## end your R code and logic 
