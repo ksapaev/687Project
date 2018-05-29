@@ -108,31 +108,31 @@ dev.off()
 
 
 png(filename="RoomSatisfaction.png", width=800, height=600)
-hist(data$Room_Satisfy, main="Histogram for Room Satisfaction", xlab= "Room Satisfaction", border="blue", col="green",
+hist(df$Room_Satisfy, main="Histogram for Room Satisfaction", xlab= "Room Satisfaction", border="blue", col="green",
                          xlim=c(0,10), las=1, breaks=15)
 dev.off()
 
 
 png(filename="CheckIn.png", width=800, height=600)
-hist(data$CheckIn, main="Histogram for Check in", xlab= "Check In", border="blue", col="yellow",
+hist(df$CheckIn, main="Histogram for Check in", xlab= "Check In", border="blue", col="yellow",
                          xlim=c(0,10), las=1, breaks=15)
 dev.off()
 
 
 png(filename="HotelCondition.png", width=800, height=600)
-hist(data$Hotel_Condition, main="Histogram for Hotel Condition", xlab= "Hotel Condition", border="blue", col="purple",
+hist(df$Hotel_Condition, main="Histogram for Hotel Condition", xlab= "Hotel Condition", border="blue", col="purple",
                         xlim=c(0,10), las=1, breaks=15)
 dev.off()
 
 
 png(filename="CustomerService.png", width=800, height=600)
-hist(data$Customer_Service, main="Histogram for Customer Service", xlab= "Customer Service", border="blue", col="red",
+hist(df$Customer_Service, main="Histogram for Customer Service", xlab= "Customer Service", border="blue", col="red",
                           xlim=c(0,10), las=1, breaks=15)
 dev.off()
 
 
 png(filename="StaffCared.png", width=800, height=600)
-hist(data$Staff_Cared, main="Histogram for Staff Cared", xlab= "Staff Care", border="blue", col="grey",
+hist(df$Staff_Cared, main="Histogram for Staff Cared", xlab= "Staff Care", border="blue", col="grey",
                             xlim=c(0,10), las=1, breaks=15)
 dev.off()
 
