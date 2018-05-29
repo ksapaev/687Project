@@ -101,6 +101,18 @@
         },
         {
             "name": "StaffCared.png"
+        },
+        {
+            "name": "POV.png"
+        },
+        {
+            "name": "RevenueAge.png"
+        },
+        {
+            "name": "RevenueStay.png"
+        },
+        {
+            "name": "Region.png"
         }
     ],
     "edges": [
@@ -235,6 +247,22 @@
         {
             "source": "Descriptive_Statistics.R",
             "target": "StaffCared.png"
+        },
+        {
+            "source": "Visualization.R",
+            "target": "POV.png"
+        },
+        {
+            "source": "Visualization.R",
+            "target": "RevenueAge.png"
+        },
+        {
+            "source": "Visualization.R",
+            "target": "RevenueStay.png"
+        },
+        {
+            "source": "Visualization.R",
+            "target": "Region.png"
         }
     ]
 }

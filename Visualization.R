@@ -13,6 +13,7 @@ library(dplyr)
 library(ggplot2)
 library(ggmap)
 library(fiftystater)
+library(reshape2)
 
 # Creating a box plot
 myboxPlot <- ggplot(df, aes(x=Overall_Satisfaction, y=LTR)) + geom_boxplot(fill="yellow", col="black")
@@ -23,19 +24,64 @@ png(filename="boxplot_LTR_Satisfaction.png", width=600, height=600)
 myboxPlot
 dev.off()
 
+
+
+#Creating a plot for Revenue compared Age Range
+myPlotAgeRev <- ggplot(df, aes(x= AgeRange, y= Revenue))+ geom_col( fill="black") + ggtitle("Revenue compared to Age Range" )
+
+png(filename="RevenueAge.png", width=800, height=600)
+myPlotAgeRev
+dev.off()
+
+
+#Creating a plot for Revenue compared Length of Stay
+myPlotStayRev <- ggplot(df, aes(x= LengthStay, y= Revenue))+ geom_col( fill="darkred") + ggtitle("Revenue compared to Length of Stay" )
+
+png(filename="RevenueStay.png", width=800, height=600)
+myPlotStayRev
+dev.off()
+
 ##################################
 
+#Promoter/Detractor by Purpose of Visit
+promoters <- df[df$NPS=="Promoter",]
+detractors <- df[df$NPS=="Detractor",]
 
+proPOV <- tapply(promoters$NPS, promoters$POV, length)
+detPOV <- tapply(detractors$NPS, detractors$POV, length)
 
+POV <- data.frame(pov=names(proPOV), promoters=as.numeric(proPOV), detractors=as.numeric(detPOV))
+rownames(POV) <- NULL
 
-#HEatmap
-#POV LTR
-#GENDer LTR
+POV <- melt(POV)
 
+barchart <- ggplot(POV, aes(x= pov, y= value, fill=variable)) + geom_bar(stat="identity", width=0.8, position = "dodge")
+barchart <- barchart + xlab("") + ylab("Number of Promoter/Detractor") +  theme_minimal() + ggtitle("Promoter/Detractor by Purpose of Visit")
+barchart <- barchart + theme(legend.position="bottom") + theme(legend.title=element_blank())
+barchart <- barchart + scale_fill_manual(POV$variable,values=c("#5A7247","#B76BA3")) 
 
+png(filename="POV.png", width=800, height=600)
+barchart
+dev.off()
 
+#Promoter/Detractor by Region
 
+proRegion <- tapply(promoters$NPS, promoters$StateRegion, length)
+detRegion <- tapply(detractors$NPS, detractors$StateRegion, length)
 
+Region <- data.frame(region=names(proRegion), promoters=as.numeric(proRegion), detractors=as.numeric(detRegion))
+rownames(Region) <- NULL
+
+Region <- melt(Region)
+
+barchart2 <- ggplot(Region, aes(x= region, y= value, fill=variable)) + geom_bar(stat="identity", width=0.8, position = "dodge")
+barchart2 <- barchart2 + xlab("") + ylab("Number of Promoter/Detractor") +  theme_minimal() + ggtitle("Promoter/Detractor by Regions")
+barchart2 <- barchart2 + theme(legend.position="bottom") + theme(legend.title=element_blank())
+barchart2 <- barchart2 + scale_fill_manual(Region$variable,values=c("#5A7247","#B76BA3")) 
+
+png(filename="Region.png", width=800, height=600)
+barchart2
+dev.off()
 
 
 #########################################################################
@@ -139,9 +185,12 @@ dev.off()
 
 ####################################
 ##### write output file ############
-# add your R code to write map_usa_Detractor.png
+# add your R code to write Region.png
 ####################################
 
 
 		
+
+
+
 
